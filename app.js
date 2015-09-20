@@ -14,16 +14,13 @@ $(document).ready(function() {
 		i++;
 	}
 
-
 	// $("ul").on("click", function() {
 
 	// 	  //console.log($(this).find(".Location").text());
 	// 	  console.log($(this).find(".Location").data("query"));
 	// 	  //var QueryArray.push()
 
-	// 	  //var LocationIndex = 0;
-
- 
+	// 	  //var LocationIndex = 0; 
 
 	// });
 
@@ -35,7 +32,6 @@ $(document).ready(function() {
 	// 	//Element.append("<div class='LocationName' style='background-color:#337ab7'>" + LocationName + "</div>");
 	// });
 
-// 	while (LocationQuery[i]) {
 	function GetData(Location, Element) {
 		$.ajax({
 			url : "http://api.wunderground.com/api/a7942b382662121a/geolookup/conditions/forecast/astronomy/q/" + Location + ".json",
@@ -65,7 +61,6 @@ $(document).ready(function() {
 			if (PressureTrend == "0") PressureTrend = "S";
 			if (PressureTrend == "-") PressureTrend = "F";
 
-
 			(function() {
 				var Table = $("<table></table>");
 				Element.append(Table);
@@ -92,7 +87,7 @@ $(document).ready(function() {
 
 		});
 	}
-	$('.Container').slideUp( 0 ).delay( 200 ).fadeIn( 400 );
 
+	$('.Container').slideUp( 0 ).delay( 200 ).fadeIn( 400 );
 
 });
