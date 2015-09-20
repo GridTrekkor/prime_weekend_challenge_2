@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+        <script src="app.js"></script>
+        <title>prime_weekend_challenge_2: Wunderground API</title>
+    </head>    
+    <body>
+
+    <div class="jumbotron">
+
+	   <div id="Title">Wunderground API</div>
+
+	</div>
+
+    <!-- <div id="Location"></div> -->
+    <div id="UpdatedTime"></div>
+
+    <br /><br />
+
+<!--     <div class="DataType">Conditions: 
+    	<span class="Data" id="Conditions"></span>
+    </div>
+    <div class="DataType">Temperature: 
+    	<span class="Data" id="Temperature"></span>&deg;
+    </div>
+    <div class="DataType">Dew Point: 
+    	<span class="Data" id="DewPoint"></span>&deg;
+    </div>    
+    <div class="DataType">Humidity: 
+    	<span class="Data" id="Humidity"></span>
+    </div>
+    <div class="DataType">Wind: 
+    	<span class="Data" id="WindSpeed"></span> <span style="font-weight:normal">mph from</span> <span class="Data" id="WindDirection"></span>
+    </div>
+    <div class="DataType">Pressure: 
+    	<span class="Data" id="Pressure"></span> <span style="font-weight:normal">in</span> <span class="Data" id="PressureTrend"></span>
+    </div>
+ -->
+    <div class="Container">
+	    <ul class="HasData" style="background-color:#337ab7">
+	    	<div class="Location" data-query="KMSP"></div>
+	    </ul>
+	    <ul class="HasData" style="background-color:#5cb85c">
+	    	<div class="Location" data-query="KEAU"></div>
+	    </ul>
+	    <ul class="HasData" style="background-color:#f0ad4e">
+	    	<div class="Location" data-query="KSAN"></div>
+	    </ul>
+	    <ul class="HasData" style="background-color:#d9534f">
+	    	<div class="Location" data-query="EGLL"></div>
+	    </ul>
+	</div>
+
+<!-- 	 <div class="Container">
+	    <ul class="EmptyUL" style="">
+	    	<div class="Location" style="color:#BBB;line-height:345px;font-size:130px">+</div>
+	    </ul>
+	    <ul class="BlankUL">
+
+	    </ul>
+	    <ul class="BlankUL">
+
+	    </ul>
+	    <ul class="BlankUL">
+
+	    </ul> -->
+
+	</div>
+
+    </body>
+</html>
