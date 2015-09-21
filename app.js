@@ -24,13 +24,18 @@ $(document).ready(function() {
 
 	// });
 
-	// $(".Container .EmptyUL").on("click", function() {
-	// 	Location = prompt("Enter zip");
-	// 	console.log(this);
-	// 	GetData(Location, $(".EmptyUL"));
-	// 	Element.removeClass("EmptyUL").addClass("HasData");
-	// 	//Element.append("<div class='LocationName' style='background-color:#337ab7'>" + LocationName + "</div>");
-	// });
+	$(".Container .EmptyUL").on("click", function() {
+		Location = prompt("Enter query");
+		console.log(Location);
+		// GetData(Location, $(".EmptyUL"));
+		$(".Container .EmptyUL").css("background-color", "#5bc0de");
+		$(".Container .EmptyUL").removeClass("EmptyUL").addClass("HasData");
+		Element = $(".Container .EmptyUL .Location");
+		Element.append(GetData(Location, $(".HasData .Location").eq(i)));
+		//i++;
+		
+
+	});
 
 	function GetData(Location, Element) {
 		$.ajax({
@@ -65,16 +70,16 @@ $(document).ready(function() {
 				var Table = $("<table></table>");
 				Element.append(Table);
 				var TableHTML = "";
-				TableHTML += "<tr>";
+				TableHTML += "<tr style='height:34px;'>";
 				TableHTML += "<td class='DataType'>Dew Point</td><td class='Data'>" + DewPoint + "&deg;</td>";
 				TableHTML += "</tr>";
-				TableHTML += "<tr>";
+				TableHTML += "<tr style='height:34px;'>";
 				TableHTML += "<td class='DataType'>Humidity</td><td class='Data'>" + Humidity + "</td>";
 				TableHTML += "</tr>";
-				TableHTML += "<tr>";
+				TableHTML += "<tr style='height:34px;'>";
 				TableHTML += "<td class='DataType'>Wind</td><td class='Data'>" + WindSpeed + " mph" /*+ WindDirection*/ + "</td>";
 				TableHTML += "</tr>";	
-				TableHTML += "<tr>";
+				TableHTML += "<tr style='height:34px;'>";
 				TableHTML += "<td class='DataType'>Pressure</td><td class='Data'>" + Pressure + " " + PressureTrend + "</td>";
 				TableHTML += "</tr>";
 
